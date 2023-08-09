@@ -78,7 +78,7 @@ pipeline {
             stage('Run PyLint') {
                 steps {
                     //sh 'python3 -m pytest'
-                    sh 'pylint'
+                    sh 'pylint .'
                 }
             }
             
