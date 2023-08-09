@@ -95,12 +95,12 @@
 #     entry: check-yaml
 #     language: python
 #     types: [yaml]
--   id: debug-statements
-    name: debug statements (python)
-    description: checks for debugger imports and py37+ `breakpoint()` calls in python source.
-    entry: debug-statement-hook
-    language: python
-    types: [python]
+# -   id: debug-statements
+#     name: debug statements (python)
+#     description: checks for debugger imports and py37+ `breakpoint()` calls in python source.
+#     entry: debug-statement-hook
+#     language: python
+#     types: [python]
 -   id: destroyed-symlinks
     name: detect destroyed symlinks
     description: detects symlinks which are changed to regular files with a content of a path which that symlink was pointing to.
