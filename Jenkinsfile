@@ -12,7 +12,7 @@ pipeline {
                 }
             }
             
-            stage('Pre-commit checks') {
+            stage('Run PyTest') {
                 steps {
                     // Run your pre-commit checks here, for example:
                     sh 'echo "Running pre-commit checks"'
@@ -23,7 +23,7 @@ pipeline {
             }
                  
                     
-            stage('Pre-commit Build') {
+            stage('Run Pre-commit Checks') {
                 steps {
                     // Install pre-commit
                     sh 'pip install pre-commit'
@@ -75,7 +75,7 @@ pipeline {
             // }
         
                     
-            stage('Test') {
+            stage('Run PyLint') {
                 steps {
                     //sh 'python3 -m pytest'
                     sh 'pylint'
