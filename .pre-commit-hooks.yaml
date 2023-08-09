@@ -89,12 +89,12 @@
     entry: check-xml
     language: python
     types: [xml]
--   id: check-yaml
-    name: check yaml
-    description: checks yaml files for parseable syntax.
-    entry: check-yaml
-    language: python
-    types: [yaml]
+# -   id: check-yaml
+#     name: check yaml
+#     description: checks yaml files for parseable syntax.
+#     entry: check-yaml
+#     language: python
+#     types: [yaml]
 -   id: debug-statements
     name: debug statements (python)
     description: checks for debugger imports and py37+ `breakpoint()` calls in python source.
@@ -199,4 +199,3 @@
     language: python
     types: [text]
     stages: [commit, push, manual]
-    
