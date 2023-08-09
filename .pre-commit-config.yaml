@@ -24,11 +24,10 @@ repos:
         log_file: logs/pre-commit.log
         args: [--include=\.pyi?$, --verbose, --line-length=110, --target-version=py39]
 
--   repo: https://github.com/Animatea/AnimateaBot
-    rev: 1.0.0
-    hooks:
-    -    id: run_coverage
-         include: run_coverage.py
-         always_run: true
-         args: [python, -m, src, coverage]
-         
+# -   repo: https://github.com/Animatea/AnimateaBot
+#     rev: 1.0.0
+#     hooks:
+#     -    id: run_coverage
+#          include: run_coverage.py
+#          always_run: true
+#          args: [python, -m, src, coverage]
