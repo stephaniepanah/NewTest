@@ -21,7 +21,6 @@ pipeline {
                     // Add more pre-commit checks as needed
                 }
             }
-                 
                     
             stage('Run Pre-commit Checks') {
                 steps {
