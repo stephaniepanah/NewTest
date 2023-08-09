@@ -44,7 +44,7 @@ pipeline {
             //     }
             // }
             
-            stage('Lint') {
+            stage('Flake8') {
                 agent {
                     docker {
                         image 'python:3.11.4' // Use appropriate Python version
