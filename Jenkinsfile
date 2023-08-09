@@ -29,11 +29,9 @@ pipeline {
                     //sh '/usr/bin/pip install pre-commit'
                     
                     // Run pre-commit checks
-                    
                     //sh 'pre-commit run --all-files'
                     sh 'pre-commit run'
                     //sh '/usr/bin/python3 -m pre-commit run --all-files'
-                    
                     //sh 'trailing-whitespace'
                     //sh 'check_added_large_files'
                 }
@@ -46,33 +44,32 @@ pipeline {
             //     }
             // }
             
-            // stage('Lint') {
-            // agent {
-            //     docker {
-            //         image 'python:3.11.4' // Use appropriate Python version
-            //         }
-            // }
-            // steps {
-            //     script {
-            //         // Install Flake8 if not already installed
-            //         sh 'pip install -U flake8'
+            stage('Lint') {
+                agent {
+                    docker {
+                        image 'python:3.11.4' // Use appropriate Python version
+                    }
+                }
+                steps {
+                    script {
+                        // Install Flake8 if not already installed
+                        sh 'pip install -U flake8'
 
-            //         // Run Flake8 linting
-            //         sh 'flake8 "C:\\DEV\\JenkinsTest\\jenkins"'
-            //     }
-            // }
-            //     // steps {
-            //     //     script {
-            //     //         // Install Flake8 if not already installed
-            //     //         sh '/usr/bin/pip install flake8'
+                        // Run Flake8 linting
+                        sh 'flake8 "C:/DEV/pipelines/newtest"'
+                    }
+                }
+                // steps {
+                //     script {
+                //         // Install Flake8 if not already installed
+                //         sh '/usr/bin/pip install flake8'
 
-            //     //         // Run Flake8 linting
-            //     //         //sh 'flake8 .'
-            //     //         sh '/usr/bin/python3 -m flake8'
-            //     //     }
-            //     // }
-            // }
-        
+                //         // Run Flake8 linting
+                //         //sh 'flake8 .'
+                //         sh '/usr/bin/python3 -m flake8'
+                //     }
+                // }
+            }
                     
             stage('Run PyLint') {
                 steps {
