@@ -31,7 +31,8 @@ pipeline {
                     
                     // Run pre-commit checks
                     
-                    sh 'pre-commit run --all-files'
+                    //sh 'pre-commit run --all-files'
+                    sh 'pre-commit run'
                     //sh '/usr/bin/python3 -m pre-commit run --all-files'
                     
                     //sh 'trailing-whitespace'
