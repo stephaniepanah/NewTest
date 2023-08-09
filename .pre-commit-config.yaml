@@ -1,0 +1,34 @@
+default_language_version:
+    python: python3.10
+
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.0.1
+    hooks:
+    -   id: check-yaml
+        log_file: logs/pre-commit.log
+
+    -   id: end-of-file-fixer
+        log_file: logs/pre-commit.log
+
+    -   id: trailing-whitespace
+        log_file: logs/pre-commit.log
+
+    -  id: check-json
+       log_file: logs/pre-commit.log
+
+-   repo: https://github.com/psf/black
+    rev: 21.11b1
+    hooks:
+    -   id: black
+        log_file: logs/pre-commit.log
+        args: [--include=\.pyi?$, --verbose, --line-length=110, --target-version=py39]
+
+-   repo: https://github.com/Animatea/AnimateaBot
+    rev: 1.0.0
+    hooks:
+    -    id: run_coverage
+         include: run_coverage.py
+         always_run: true
+         args: [python, -m, src, coverage]
+         
